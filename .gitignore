@@ -1,0 +1,15 @@
+
+.venv/
+
+__pycache__/
+
+*.pyc
+
+.DS_Store
+
+/data/
+
+Initiez-vous au MLOps (partie 1).md
+Option B - Exercice - Elaborez un modèle de scoring.md
+Option B - Livrables et bilan.md
+Outils+Open+Source+pour+élaborer+une+plateforme+MLOps.pdf
