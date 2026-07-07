@@ -16,3 +16,7 @@ Outils+Open+Source+pour+élaborer+une+plateforme+MLOps.pdf
 
 notebooks/start-here-a-gentle-introduction.ipynb
 notebooks/lightgbm_with_simple_features.py
+
+mlflow.db
+mlartifacts/
+mlruns/
