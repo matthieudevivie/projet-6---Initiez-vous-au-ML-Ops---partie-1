@@ -20,3 +20,13 @@ notebooks/lightgbm_with_simple_features.py
 mlflow.db
 mlartifacts/
 mlruns/
+
+# Soutenance
+
+de_vivie_matthieu*
+
+Option B - *
+Outils+Open+Source*
+
+.claude/
+*.bak
