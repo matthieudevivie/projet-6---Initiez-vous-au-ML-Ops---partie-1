@@ -30,3 +30,8 @@ Outils+Open+Source*
 
 .claude/
 *.bak
+
+# Entrainement
+
+bac_a_sable*
+revision*
