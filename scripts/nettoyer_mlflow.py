@@ -54,6 +54,16 @@ def date_du_run(run):
     return datetime.fromtimestamp(run.info.start_time / 1000)
 
 
+def lire_date(texte):
+    """Accepte « AAAA-MM-JJ » ou « AAAA-MM-JJ HH:MM » (heure locale)."""
+    for fmt in ("%Y-%m-%d %H:%M", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(texte, fmt)
+        except ValueError:
+            pass   # ce format ne correspond pas : on essaie le suivant
+    raise SystemExit(f"Date invalide : {texte!r} (attendu AAAA-MM-JJ ou 'AAAA-MM-JJ HH:MM')")
+
+
 def main():
     parseur = argparse.ArgumentParser(description=__doc__)
     parseur.add_argument(
@@ -87,7 +97,7 @@ def main():
         return
 
     # --- tri des runs ------------------------------------------------------
-    pivot = datetime.strptime(args.avant, "%Y-%m-%d")
+    pivot = lire_date(args.avant)
     runs = recuperer_runs(client, experience.experiment_id)
 
     a_archiver = [r for r in runs if date_du_run(r) < pivot]
